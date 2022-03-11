@@ -1,3 +1,3 @@
-require_relative '../solver.rb'
+require_relative '../solver'
 
 require 'yaml'
