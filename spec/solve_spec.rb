@@ -1,4 +1,4 @@
-require_relative '../solver.rb'
+require 'spec_helper'
 
 describe 'Testing the factoral method in the solver class' do
   before :each do
@@ -6,25 +6,25 @@ describe 'Testing the factoral method in the solver class' do
   end
 
   it 'with the above parameter a Solver object should be created' do
-    @Solver.should be_an_instance_of Solver
+    @solver.should be_an_instance_of Solver
   end
 
   it 'return the appropriate output with 4 as an argument' do
-    @Solver.factorial(4).should eql 24
+    @solver.factorial(4).should eql 24
   end
 
   it 'the special case input 0 should return a 1' do
-    @solver.factorial(0) eql 1
+    @solver.factorial(0).should eql 1
   end
 
   it 'the method should only accept positive integers and 0' do
-    expect {@solver.factoral}.to raise_error("Not a positive integer")
+    expect(@solver.factorial(-1)).to eq "Not a positive integer" 
   end
 end
 
 describe 'Testing the reverse method in the solver class' do 
   
-  it 'The method reverse should return olleh given arguments hello'
+  it 'The method reverse should return olleh given arguments hello' do
     expect(@solver.reverse("hello")).to eq "olleh"
   end
 
@@ -36,11 +36,11 @@ end
 
 describe 'Testing the fizzbuzz method in the solver class' do 
   
-  it 'The method fizzbuzz should return fizz given arguments 3'
+  it 'The method fizzbuzz should return fizz given arguments 3' do
     expect(@solver.fizzbuzz(3)).to eq "fizz"
   end
 
-  it 'The method fizzbuzz should return fizz given arguments 9'
+  it 'The method fizzbuzz should return fizz given arguments 9' do
     expect(@solver.fizzbuzz(9)).to eq "fizz"
   end
 
