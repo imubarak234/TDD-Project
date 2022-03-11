@@ -22,5 +22,18 @@ class Solver
       args.to_s
     end
   end
-  
+
+  def reverse(args)
+    final_answer = ''
+    count = args.length - 1
+    (0..args.length - 1).each do
+      final_answer += args[count]
+      count -= 1
+    end
+    final_answer
+  end
 end
+
+milk = Solver.new
+
+puts milk.reverse('hello')

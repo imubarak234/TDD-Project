@@ -23,12 +23,16 @@ describe 'Testing the factoral method in the solver class' do
 end
 
 describe 'Testing the reverse method in the solver class' do
+  before :each do
+    @solvering = Solver.new
+  end
+
   it 'The method reverse should return olleh given arguments hello' do
-    expect(@solver.reverse('hello')).to eq 'olleh'
+    expect(@solvering.reverse('hello')).to eq 'olleh'
   end
 
   it 'The method reverse should return sgnixam given the argument maxings ' do
-    expect(@solver.reverse('maxings')).to eq 'sgnixam'
+    expect(@solvering.reverse('maxings')).to eq 'sgnixam'
   end
 end
 
