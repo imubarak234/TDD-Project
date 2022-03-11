@@ -21,3 +21,17 @@ describe 'Testing the factoral method in the solver class' do
     expect {@solver.factoral}.to raise_error("Not a positive integer")
   end
 end
+
+describe 'Testing the reverse method in the solver class' do 
+  
+  it 'The method reverse should return olleh given arguments hello'
+    expect(@solver.reverse("hello")).to eq "olleh"
+  end
+
+  it 'The method reverse should return sgnixam given the argument maxings ' do
+    expect(@solver.reverse("maxings")).to eq "sgnixam"
+  end
+
+end
+
+
